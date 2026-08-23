@@ -14,20 +14,17 @@ python3 manage.py runserver
 
 Open `http://127.0.0.1:8000/`.
 
-## Deploy Django on Render
+## Deploy free on GitHub Pages
 
-This repository includes `render.yaml` for a production Django deployment.
+GitHub Pages hosts a static build of this portfolio for free. The build workflow also copies all downloadable certificate PDFs.
 
-1. Push the latest code to GitHub.
-2. Create a free [Render](https://render.com) account and connect GitHub.
-3. Select **New → Blueprint** and choose this repository.
-4. Confirm the `aditya-portfolio` service and click **Apply**.
-5. Render will install dependencies, collect static files, run migrations, and publish the site at an `.onrender.com` URL.
+1. Push the latest code to the `main` branch.
+2. Open **Settings → Pages** in the GitHub repository.
+3. Under **Build and deployment**, select **GitHub Actions**.
+4. Open the **Actions** tab and run **Deploy portfolio to GitHub Pages**.
 
-Every push to `main` automatically redeploys the portfolio. Free Render services spin down after inactivity and wake on the next visit.
+The site will be published at `https://adityagaikwad123.github.io/Portfolio/`.
 
-## Production notes
+> GitHub Pages does not run a Django server. The Django project remains available for local development; the GitHub workflow creates the static portfolio that Pages publishes.
 
-- Set `SECRET_KEY` in the host environment; Render generates it from `render.yaml`.
-- Add your own domain to `ALLOWED_HOSTS` if you connect one.
-- Replace `your.email@example.com` in `templates/dashboard.html` with your real email before sharing.
+Replace `your.email@example.com` in `templates/dashboard.html` with your real email before sharing.
