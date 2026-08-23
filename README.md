@@ -26,5 +26,3 @@ GitHub Pages hosts a static build of this portfolio for free. The build workflow
 The site will be published at `https://adityagaikwad123.github.io/Portfolio/`.
 
 > GitHub Pages does not run a Django server. The Django project remains available for local development; the GitHub workflow creates the static portfolio that Pages publishes.
-
-Replace `your.email@example.com` in `templates/dashboard.html` with your real email before sharing.
